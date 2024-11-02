@@ -1,0 +1,373 @@
+* {/* Reset default margins and paddings for all elements */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* Ensures padding and borders are included in element's total width and height */
+}
+
+body {
+    display: flex;/* Use flexbox for layout */
+    flex-direction: column;/* Stack children vertically */
+    min-height: 100vh;/* Ensure the body takes at least full viewport height */
+    font-family: 'Afacad', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;   
+    color: #455749;
+    padding: 20px;/* Padding around body content */
+    background-image: url('HB.jpg'); 
+    background-size: cover;/* Cover entire body */
+    background-position: center;
+    font-size: 16px; /* Increased base font size */
+}
+
+header {
+    background-color: #353a36;/* Remove bullet points */
+    padding: 10px 0;/* Remove padding */
+    
+}
+
+nav {
+    background: linear-gradient(90deg, #524d4b, #161514);
+    padding: 10px 0;/* Vertical padding */
+    text-align: center;
+    font-size: 18px;
+}
+
+nav ul {
+    list-style: none;/* Remove bullet points */
+    padding: 0;/* Remove padding */
+}
+
+nav ul li {
+    display: inline;/* Display list items inline */
+    margin-right: 20px; /* Adjusted for better spacing */
+}
+
+nav ul li a {
+    color: white;/* Link color */
+    text-decoration: none;/* Remove underline */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff7e5f;
+    text-decoration: underline;
+}
+
+main {
+    flex-grow: 1; /* Allow main to grow and fill available space */
+    opacity: 0;   /* Start with opacity 0 for fade-in effect */
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;/* Center items horizontally */
+    align-items: center;/* Center items vertically */
+    flex: 1;/* Allow this section to grow */
+    text-align: left;
+}
+
+.about-me {
+    max-width: 400px;/* Limit width */
+    margin-right: 20px; /* Space to the right */
+}
+.about-me h1 {
+    font-size: 20px;
+    margin-bottom: 5px;/* Space below heading */
+    font-style: italic;
+}
+
+.about-me h2 {
+    font-style: italic;
+    font-size: 35px;
+}
+
+.about-me p {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.social-icons a {
+    margin-right: 10px; /* Space between icons */
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;/* Set height to 80% of the viewport height */
+    transition: transform 0.3s ease, opacity 0.3s ease;/* Transition for hover effects */
+}
+
+.image-container img {
+    max-width: 300px;
+    height: auto;/* Maintain aspect ratio */
+    border-radius: 30%;/* Rounded corners */
+    border: 5px solid #333;/* Border styling */
+}
+
+.image-container img:hover {
+    transform: scale(1.1);/* Scale up image on hover */
+    opacity: 0.9;/* Slightly reduce opacity */
+}
+
+#about {
+    background-color: #99845e;
+    padding: 20px;
+    margin: 20px 0;/* Margin above and below */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;/* Stack children vertically */
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;/* Space between items */
+}
+
+
+#about h2 {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.993);/* Text shadow for better visibility */
+}
+#about h2::before {
+    content: "★ "; /* Star character before the heading */
+    font-size: 35; /* Slightly larger than the heading */
+    color: #000000; /* Color of the star */
+    margin-right: 10px; /* Space between the star and heading */
+}
+
+.owner-image {
+    width: 250px;
+    height: auto;/* Maintain aspect ratio */
+    border-radius: 10%;
+}
+
+.owner-details p {
+    color: #000;
+    font-size: 20px; 
+}
+
+.blog-image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    margin: 50px 0;
+}
+
+.blog-item:nth-child(odd) {
+    background-color: #88ad66; /* Background color for odd items */
+}
+
+.blog-item:nth-child(even) {
+    background-color: #a54e4e; /* Background color for even items */
+}
+
+
+.blog-item {
+    padding: 15px; 
+    border-radius: 5px; 
+    margin-bottom: 10px; /* Space between items */
+}
+
+.blog-image {
+    width: 300px; 
+    height: 200px; 
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 10%;
+    border: 5px solid #333; /* Border styling */
+    cursor: pointer; 
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.blog-image:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+
+h3 {
+    font-size: 1.5em; 
+    margin-bottom: 12px; /* Space below the heading */
+    color: #333; /* Heading color */
+    text-align: center; 
+    font-weight: bold; 
+}
+
+.description {
+    margin-top: 30px; /* Space above description */
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);/* Text color */
+    font-weight: bold;
+}
+
+#about p {
+    margin-bottom: 20px; /* Space below each paragraph */
+    line-height: 1.2;
+}
+
+.newsletter-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.newsletter-section > h1 {
+    background: linear-gradient(90deg, #d5d80b, #0f0f0f);/* Gradient background */
+    -webkit-background-clip: text;/* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent */
+    background-clip: text;/* Clip background to text */
+    color: transparent;/* Ensure text is transparent */
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;/* Stack children vertically */
+    max-width: 300px;
+    margin: 20px auto;/* Center align with margin */
+    border: 3px solid #724706; /* Change the border thickness (3px) */
+    border-radius: 8px; 
+    padding: 20px;
+}
+
+.input-group {
+    position: relative;/* Position for label */
+    margin-bottom: 20px;/* Space below each input group */
+}
+
+.input-group input,
+.input-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+
+}
+.input-group input[type="email"]::placeholder {
+    color: red; /* Placeholder color */
+}
+.input-group input:focus {
+    border-color: #a7bea7; /* Change border color on focus */
+}
+.input-group input[type="email"]:valid::placeholder {
+    color: transparent; /* Hide placeholder when valid */
+}
+.input-group input[type="email"]:valid {
+    border-color: #4caf50; /* Change border color to green when valid */
+}
+.input-group input[type="email"]:invalid {
+    border-color: red; /* Change border color to red when invalid */
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px; /* Position from left */
+    top: 10px; /* Position from top */
+    font-size: 16px;
+    color: #999;
+    transition: all 0.2s ease;/* Transition for smooth effect */
+}
+
+/* Move label up when focused or not empty */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -10px;/* Move label up */
+    left: 5px; /* Move label left */
+    font-size: 12px;/* Reduce font size */
+    color: #718871;/* Change color */
+}
+
+.newsletter-section .input-group:not(:last-child) {
+    margin-bottom: 25px; /* Apply margin to all input groups except the last one */
+}
+
+button {
+    padding: 10px;
+    background-color: #686122ea;
+    color: white;
+    border: none; /* Remove border */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: #4cae4c; /*  background color on hover */
+}
+
+footer {
+    background-color: #121814; 
+    color: white; /* Text color */
+    padding: 20px 0; 
+    text-align: center; 
+}
+
+footer ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+footer ul li:not(:last-child) {
+    margin-right: 25px; /* Space between links except for the last one */
+}
+
+footer ul li {
+    display: inline; /* Display links inline */
+    margin: 0 15px; /* Space between links */
+}
+
+footer ul li a {
+    color: #ffffff; /*  link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+footer ul li a:hover {
+    color: #ff7e5f; /* Change color on hover */
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;/* End state of fade-in */
+    }
+}
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;/* Stack items vertically */
+        margin: 20px 0; /* Adjusted for better spacing */
+    }
+    
+     /* Stack image and text in centered content */
+    .centered-content {
+        flex-direction: column; /* Stack vertically */
+        align-items: center;
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+    }
+
+    .image-container {
+        height: auto; /* Allow height to adjust */
+    }
+
+    .blog-image-container {
+        flex-direction: column; /* Stack images on small screens */
+        align-items: center;
+    }
+
+    .blog-image {
+        width: 100%; /* Full width for blog images on small screens */
+        max-width: 300px; /* Limit max width */
+    }
+}
