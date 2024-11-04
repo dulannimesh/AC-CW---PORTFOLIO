@@ -55,7 +55,6 @@ main {
     flex-grow: 1; /* Allow main to grow and fill available space */
     opacity: 0;   /* Start with opacity 0 for fade-in effect */
     animation: fadeIn 1s forwards; /* Fade-in animation */
-
 }
 
 .centered-content {
@@ -136,11 +135,19 @@ main {
 .about h2 {
     text-shadow: 2px 2px 4px rgba(252, 244, 244, 0.993);/* Text shadow for better visibility */
 }
+
 .about h2::before {
     content: "★ "; /* Star character before the heading */
     font-size: 35; /* Slightly larger than the heading */
     color: #000000; /* Color of the star */
     margin-right: 10px; /* Space between the star and heading */
+}
+
+.about h2::after {
+    content: "★ "; /* Star character after the heading */
+    font-size: 35; 
+    color: #000000; 
+    margin-left: 10px; 
 }
 
 .owner-image {
@@ -317,8 +324,6 @@ button:hover {
 .Contact-button {
     background-color: #4c5013; /* Background color on hover */
 }
-
-
 
 footer {
     background-color: #121814; 
